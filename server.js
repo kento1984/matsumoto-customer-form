@@ -27,7 +27,7 @@ if (!fs.existsSync(FAVORITES_FILE)) {
   fs.writeFileSync(FAVORITES_FILE, JSON.stringify({}));
 }
 
-const transporter = nodemailer.createTransporter({
+const transporter = nodemailer.createTransport({
   host: 'smtp.office365.com',
   port: 587,
   secure: false,
